@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+		"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+		"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="main" extends="struts-default">
+
+		<action name="loginAction" class="com.movie.action.LoginAction">
+			<result name="success">/success.jsp</result>
+			<result name="error">/failed.jsp</result>
+		</action>
+		<action name="loadUserMovies" class="com.movie.action.LoadUserMovies">
+			<result name="success">/loadUserMovies.jsp</result>
+			<result name="error">/failed.jsp</result>
+		</action>
+
+		<action name="loginOut" class="com.movie.action.LoginOut">
+			<result name="success">/login.jsp</result>
+		</action>
+		<action name="loadRecommendMovies" class="com.movie.action.LoadRecommendMovies">
+			<result name="success">/loadRecommendMovies.jsp</result>
+			<result name="error">/failed.jsp</result>
+		</action>
+		<action name="movieDetails" class="com.movie.action.MovieDetails">
+			<result name="success">/movieDetails.jsp</result>
+			<result name="error">/failed.jsp</result>
+		</action>
+		<action name="upLoadMovie"
+			class="com.movie.action.UpLoadMovie">
+
+
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">500*1024*1024</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="success">/success_testing.jsp</result>
+			<result name="error">/failed_testing.jsp</result>
+		</action>
+
+		<action name="searchByKeyWord"
+			class="com.movie.action.SearchByKeyWord">
+			<result name="success">/loadSearchMovies.jsp</result>
+			<result name="error">/failed_testing.jsp</result>
+		</action>
+		<action name="loadHotMovies"
+			class="com.movie.action.LoadHotMovies">
+			<result name="success">/loadHotMovies.jsp</result>
+			<result name="error">/failed.jsp</result>
+		</action></package>
+</struts>

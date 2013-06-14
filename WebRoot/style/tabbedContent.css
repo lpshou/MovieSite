@@ -1,0 +1,68 @@
+.tabbed_content {
+	background-color: grey;
+	width: 100%;	
+	height:5000px;
+	border:solid,1px;
+}
+
+.tabs {
+	height: 62px;
+	position: relative;
+}
+
+.tabs .moving_bg {
+	padding: 0px;
+	background-color:yellow;
+	position: absolute;
+	width: 25%;
+	height:25px;
+	z-index: 190;
+	left: 0;
+	padding-bottom: 29px;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+}
+
+.tabs .tab_item {
+	display: block;
+	float: left;
+	padding-top: 10px;
+	width: 25%;
+	color: #000000;
+	text-align: center;
+	z-index: 200;
+	position: relative;
+	cursor: pointer;
+}
+
+.tabbed_content .slide_content {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.tabslider {
+	width: 400%;
+}
+
+.tabslider ul {
+	float: left;
+	width: 24%;
+	margin-top: 10px;
+	margin-left:1%;
+	padding: 0px;
+	margin-right: 0px;
+}
+
+.tabslider ul a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.tabslider ul a:hover {
+	color: #aaaaaa;
+}
+
+.tabslider ul li {
+	padding-bottom: 7px;
+}
